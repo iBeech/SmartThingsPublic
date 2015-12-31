@@ -328,7 +328,7 @@ def poll() {
         sendEvent(name: 'thermostatMode', value: mode) 
         
 		// Can be: 'on' for heating / 'off' when not heating
-        def boilerActive = data.nodes.on
+        def boilerActive = data.nodes.active
 		log.debug "boilerActive: $boilerActive"
 		
 		if (boilerActive) {
